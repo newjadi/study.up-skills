@@ -20,8 +20,9 @@ let appData = {
     savings: false
 };
 
-moneyForDay = (appData.money - (parseInt(appData.expenses.q1) + parseInt(appData.expenses.q3))) / 30;
-console.log(parseInt(appData.expenses.q1) + parseInt(appData.expenses.q3));
+moneyForDay = money / 30;
+alert(moneyForDay);
+
 
 
 
