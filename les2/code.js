@@ -18,18 +18,25 @@ for (let i = 0; i < 2; i++) {
     if ( (typeof(q1) != null) && (typeof(q2) != null) &&
         (typeof(q1) != "" && (typeof(q2) != "")) ) {
         appData.expenses[q1] = q2;
-    } else {s
-        
-    }   
+    };
 };
 
-// Это работает, потому что он по умолчанию повторяет пака не будет верно.
+// Рабочий вариант.
 // while ( (typeof(q1) != null) && (typeof(q2) != null) &&
 // (typeof(q1) != "" && (typeof(q2) != "")) ) {
 //     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
 //     let q2 = prompt("Во сколько обойдется? ");
 //     appData.expenses[q1] = q2;
 // }
+
+// Рабочий вариант.
+// do {
+//     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
+//     let q2 = prompt("Во сколько обойдется? ");
+//     appData.expenses[q1] = q2;
+// } while ((typeof(q1) != null) && (typeof(q2) != null) &&
+//         (typeof(q1) != "" && (typeof(q2) != "")));
+
 
 appData.moneyForDay = appData.money / 30;
 
