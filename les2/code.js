@@ -1,11 +1,11 @@
-let money = +prompt("Укажите вашь бюджет на месясц: ");
+let money = prompt("Укажите вашь бюджет на месясц: ");
 let time = prompt("Введите дату в формате YYYY-MM-DD: ", "2019-00-01");
 
 let appData = {
     money: money,
     timeData: time,
     expenses: {},
-    optionalExpenses:  {},
+    optionalExpenses: {},
     income: [],
     savings: false
 };
@@ -15,10 +15,12 @@ for (let i = 0; i < 2; i++) {
     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
     let q2 = prompt("Во сколько обойдется? ");
 
-    if ( (typeof(q1) != null) && (typeof(q2) != null) &&
-        (typeof(q1) != "" && (typeof(q2) != "")) ) {
+    if ( (q1 != null) && (q2 != null) &&
+        (q1 != "" && (q2 != "")) ) {
         appData.expenses[q1] = q2;
-    };
+    } else {
+        continue;
+    }
 };
 
 // Рабочий вариант.
