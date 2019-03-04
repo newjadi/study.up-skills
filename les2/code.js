@@ -25,26 +25,30 @@ let appData = {
 
 // Рабочий вариант.
 
+// let i = 0;
+// while ( i < 2 ) {
+//     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
+//     let q2 = prompt("Во сколько обойдется?");
+    // if ( (q1 != null) && (q2 != null) &&
+    //     (q1 != "") && (q2 != "") ) {
+    //     appData.expenses[q1] = q2;
+    //     i++;
+    // };
+// };
+
+// Рабочий вариант.
+
 let i = 0;
-while ( i < 2 ) {
+do {
     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
-    let q2 = prompt("Во сколько обойдется?");
+    let q2 = prompt("Во сколько обойдется? ");
     if ( (q1 != null) && (q2 != null) &&
         (q1 != "") && (q2 != "") ) {
         appData.expenses[q1] = q2;
         i++;
-    } else {
-        i = 0;
     };
-};
-
-// Рабочий вариант.
-// do {
-//     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
-//     let q2 = prompt("Во сколько обойдется? ");
-//     appData.expenses[q1] = q2;
-// } while ((typeof(q1) != null) && (typeof(q2) != null) &&
-//         (typeof(q1) != "" && (typeof(q2) != "")));
+} 
+while (i < 2);
 
 
 appData.moneyForDay = appData.money / 30;
