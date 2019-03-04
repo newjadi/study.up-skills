@@ -13,15 +13,23 @@ let appData = {
 // q - сокращенное от слова question ( вопрос ).
 for (let i = 0; i < 2; i++) {
     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
-    let q2 = +prompt("Во сколько обойдется? ");
+    let q2 = prompt("Во сколько обойдется? ");
 
     if ( (typeof(q1) != null) && (typeof(q2) != null) &&
         (typeof(q1) != "" && (typeof(q2) != "")) ) {
         appData.expenses[q1] = q2;
-    } else {
+    } else {s
         
     }   
 };
+
+// Это работает, потому что он по умолчанию повторяет пака не будет верно.
+// while ( (typeof(q1) != null) && (typeof(q2) != null) &&
+// (typeof(q1) != "" && (typeof(q2) != "")) ) {
+//     let q1 = prompt("Введите обязательную статью расходов в этом месяце: ");
+//     let q2 = prompt("Во сколько обойдется? ");
+//     appData.expenses[q1] = q2;
+// }
 
 appData.moneyForDay = appData.money / 30;
 

@@ -5,7 +5,7 @@ for (let i = 0; i < 7; i++) {
     weekDay.push(day);
 }
 
-let h = document.("h1");
+
 
 
 console.log(weekDay);
