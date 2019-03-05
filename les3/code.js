@@ -22,7 +22,8 @@ function chooseOptExpenses() {
     for (let i = 0; i < 3; i++) {
         let chooseq1 = prompt ("Статья необязательных расходов?");
         let chooseq2 = prompt ("Сколько будет стоить ?");
-        if (condition) {
+        if ( (q1 != null) && (q2 != null) &&
+        (q1 != "") && (q2 != "") ) {
             appData.optionalExpenses[1] = chooseq2;
         } else {
             i--;
@@ -79,9 +80,9 @@ function checkSaving() {
 };
 
 
-start(); // Старт функции Укажите дату и Бюджет.
-chooseOptExpenses() // Старт функции Необезательных расходов.
-chooseExpenses(); // Старт функции Обязательной статьи расходов.
-detectDayBudget() // Старт функции Бюджет на один день.
-detectLevel() // Старт функции Расчет достатка.
-checkSaving(); // Старт функции Доход с дипозита.
+start(); // Старт функции "Укажите дату и Бюджет".
+chooseExpenses(); // Старт функции "Обязательной статьи расходов".
+chooseOptExpenses(); // Старт функции "Необезательных расходов".
+detectDayBudget(); // Старт функции "Бюджет на один день".
+detectLevel(); // Старт функции "Расчет достатка".
+checkSaving(); // Старт функции "Доход с дипозита".
