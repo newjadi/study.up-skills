@@ -24,7 +24,7 @@ function chooseOptExpenses() {
         let chooseq2 = prompt ("Сколько будет стоить ?");
         if ( (q1 != null) && (q2 != null) &&
         (q1 != "") && (q2 != "") ) {
-            appData.optionalExpenses[1] = chooseq2;
+            appData.optionalExpenses = chooseq2;
         } else {
             i--;
         }
